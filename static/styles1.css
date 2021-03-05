@@ -296,7 +296,8 @@ h6:before {
     }
 }
 
-h1:before {
+
+/* h1:before {
     content: "#"
 }
 
@@ -318,7 +319,7 @@ h5:before {
 
 h6:before {
     content: "######"
-}
+} */
 
 ol {
     counter-reset: ol
