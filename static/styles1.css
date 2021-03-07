@@ -2103,13 +2103,15 @@ pre code {
 a,
 .list-group button:not(.btn) {
     cursor: pointer;
-    color: #2196f3;
+    /* color: #2196f3; */
+    color: #555555;
     text-decoration: none
 }
 
 a:hover,
 .list-group button:hover:not(.btn) {
-    color: #1976d2;
+    /* color: #1976d2; */
+    color: #555555;
     text-decoration: underline
 }
 
