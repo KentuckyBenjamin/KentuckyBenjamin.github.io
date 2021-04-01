@@ -10,7 +10,9 @@
     /* The typwriter cursor */
     white-space: nowrap;
     /* Keeps the content on a single line */
-    margin: 0 auto;
+    /* margin: 0 auto; Use this is we want the typing to start in the center */
+    margin: 1 auto;
+    /* Use this is we want the typing to start on the left */
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
     /* Adjust as needed */
@@ -988,7 +990,8 @@ small {
 .site-footer a,
 .site-footer .list-group button:not(.btn),
 .list-group .site-footer button:not(.btn) {
-    color: #64b5f6
+    /* color: #64b5f6 */
+    color: #555555
 }
 
 .alert {
