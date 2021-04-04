@@ -40,45 +40,60 @@
 
             <main class="site-main">
 
-                <!-- USE THIS FOR A SINGLE QUOTE FADE IN -->
-
                 <div class="textappear">
-                    <!-- Quote  -->
-                    <!-- <h1>"O while I live to be the ruler of life, not a slave,</h1>
-                    <h1>To meet life as a powerful conqueror,</h1>
-                    <h1>No fumes, no ennui, no more complaints or scornful criticisms,</h1>
-                    <h1>To these proud laws of the air, the water and the ground,</h1>
-                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;proving my interior soul impregnable,</h1>
-                    <h1>And nothing exterior shall ever take command of me."</h1> -->
 
-                    <!-- Author -->
-                    <!-- <br>
-                    <h5>- Walt Whitman</h5> -->
-
-                    <h1>
-                        <div id="quoteDisplay">
-                            <!-- Quotes will display here -->
-                        </div>
-                    </h1>
-
+                    <div id="quoteDisplay"></div>
                     <br>
-
-                    <h5>
-                        <div id="quoteCitation">
-
-                        </div>
-                    </h5>
+                    <div id="quoteCitation"></div>
 
                     <script>
                         var quotes = [
-                            ["'For my part I attend to my own duty, and other things do not distract me; " +
+                            ["<h1> For my part I attend to my own duty, and other things do not distract me; " +
                                 "for they are either lifeless, or devoid of reason, or have gone astray " +
-                                "and have no knowledge of their path.'", "Marcus Aurelius"
+                                "and have no knowledge of their path. </h1>", "<h5> Marcus Aurelius </h5>"
                             ],
-                            ["'Nothing means nothing.'", "Macho Man Randy Savage"],
-                            ["'Take your delight and your rest in one thing alone; to pass from one action " +
-                                "that serves the good of your fellows to the next, keeping God in your thoughts.'", "Marcus Aurelius"
-                            ]
+
+                            ["<h1> Nothing means nothing. </h1>", "<h5> Macho Man Randy Savage </h5>"],
+
+                            ["<h1> Take your delight and your rest in one thing alone; to pass from one action " +
+                                "that serves the good of your fellows to the next, keeping God in your thoughts. </h1>", "<h5> Marcus Aurelius </h5>"
+                            ],
+
+                            ["<h1> O while I live to be the ruler of life, not a slave, </h1>" +
+                                "<h1> To meet life as a powerful conqueror, </h1>" +
+                                "<h1> No fumes, no ennui, no more complaints or scornful criticisms, </h1>" +
+                                "<h1> To these proud laws of the air, the water and the ground, </h1>" +
+                                "<h1> &nbsp;&nbsp;&nbsp;&nbsp;proving my interior soul impregnable, </h1>" +
+                                "<h1> And nothing exterior shall ever take command of me. </h1>", "<h5> Walt Whitman</h5>"
+                            ],
+
+                            ["<h1> Meaningless! </h1>" +
+                                "<br>" +
+                                "<h1> Meaningless! </h1>" +
+                                "<br>" +
+                                "<h1> Utterly meaningless! </h1>" +
+                                "<br>" +
+                                "<h1> Everything is meaningless </h1>", "<h5> King Solomon </h5>"
+                            ],
+
+                            ["<h1> The more the words </h1>" +
+                                "<br>" +
+                                "<h1> the less the meaning </h1>" +
+                                "<br>" +
+                                "<h1> and how does that profit anyone? </h1>", "<h5> King Solomon </h5>"
+                            ],
+
+                            ["<h1> Do not wear yourself out to get rich; </h1>" +
+                                "<h1> Have the wisdom to show restraint. </h1>", "<h5> Proverbs </h5>"
+                            ],
+
+                            ["<h1> It matters not how straight the gate, </h1>" +
+                                "<h1> &nbsp;&nbsp;&nbsp;&nbsp; How charged with punishments the scroll, </h1>" +
+                                "<h1> I am the master of my fate, </h1>" +
+                                "<br>" +
+                                "<h1> &nbsp;&nbsp;&nbsp;&nbsp; I am the captain of my soul.</h1>", "<h5> Invictus (final verse), William Ernst Henley </h5>"
+                            ],
+
                         ];
 
                         var rand_num = Math.floor(Math.random() * (quotes.length));
@@ -100,13 +115,10 @@
 
                 </div>
 
-                <!-- END OF THE SINGLE QUOTE FADE IN  -->
-
-
             </main>
 
             <footer class="site-footer dashed-top">
-                Footer text example – <a href="#">Placeholder</a> <a href="#" title="Link">LinkedIn</a>
+                – This site doesn't use cookies | No data is collected or shared –
             </footer>
 
         </div>
