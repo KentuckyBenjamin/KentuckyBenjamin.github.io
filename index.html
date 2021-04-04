@@ -40,25 +40,68 @@
 
             <main class="site-main">
 
-                <!-- <h1>“O the joy of my spirit--it is uncaged--it darts like lightning!</h1>
-                <h1>It is not enough to have this globe or a certain time,</h1>
-                <h1>I will have thousands of globes and all time.”</h1> -->
-
-                <!-- <h1>"O the joy of a manly self-hood!</h1>
-                <h1>To be servile to none, to defer to none, not to any tyrant known</h1>
-                <h1> or unknown,"</h1> -->
+                <!-- USE THIS FOR A SINGLE QUOTE FADE IN -->
 
                 <div class="textappear">
-                    <h1>"O while I live to be the ruler of life, not a slave,</h1>
+                    <!-- Quote  -->
+                    <!-- <h1>"O while I live to be the ruler of life, not a slave,</h1>
                     <h1>To meet life as a powerful conqueror,</h1>
                     <h1>No fumes, no ennui, no more complaints or scornful criticisms,</h1>
                     <h1>To these proud laws of the air, the water and the ground,</h1>
                     <h1>&nbsp;&nbsp;&nbsp;&nbsp;proving my interior soul impregnable,</h1>
-                    <h1>And nothing exterior shall ever take command of me."</h1>
+                    <h1>And nothing exterior shall ever take command of me."</h1> -->
+
+                    <!-- Author -->
+                    <!-- <br>
+                    <h5>- Walt Whitman</h5> -->
+
+                    <h1>
+                        <div id="quoteDisplay">
+                            <!-- Quotes will display here -->
+                        </div>
+                    </h1>
 
                     <br>
-                    <h5>- Walt Whitman</h5>
+
+                    <h5>
+                        <div id="quoteCitation">
+
+                        </div>
+                    </h5>
+
+                    <script>
+                        var quotes = [
+                            ["'For my part I attend to my own duty, and other things do not distract me; " +
+                                "for they are either lifeless, or devoid of reason, or have gone astray " +
+                                "and have no knowledge of their path.'", "Marcus Aurelius"
+                            ],
+                            ["'Nothing means nothing.'", "Macho Man Randy Savage"],
+                            ["'Take your delight and your rest in one thing alone; to pass from one action " +
+                                "that serves the good of your fellows to the next, peeing God in your thoughts.'", "Marcus Aurelius"
+                            ]
+                        ];
+
+                        var rand_num = Math.floor(Math.random() * (quotes.length));
+
+                        function newQuote() {
+                            var randomNumber = Math.floor(Math.random() * (quotes.length));
+                            document.getElementById('quoteDisplay').innerHTML = quotes[rand_num][0];
+                        }
+
+                        function newCitation() {
+                            var randomNumber = Math.floor(Math.random() * (quotes.length));
+                            document.getElementById('quoteCitation').innerHTML = quotes[rand_num][1];
+                        }
+
+                        window.addEventListener('load', newQuote, true);
+                        window.addEventListener('load', newCitation, true);
+                    </script>
+
+
                 </div>
+
+                <!-- END OF THE SINGLE QUOTE FADE IN  -->
+
 
             </main>
 

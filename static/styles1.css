@@ -1,6 +1,64 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 
+/* The Quote Stuff */
+
+
+/* .quote {
+    position: absolute;
+    margin: 70px 30px;
+    height: 80px;
+    top: 0px;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: wrap;
+} */
+
+
+/* .quote h1 {
+    font: 300 55px/1.2 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+} */
+
+
+/* .quote h5 {
+    font: 300 18px/1.0 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+} */
+
+
+/* @-webkit-keyframes "quoteshift" {
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.quote:nth-child(1) {
+    -webkit-animation: quoteshift 30s 0s infinite linear;
+}
+
+.quote:nth-child(2) {
+    -webkit-animation: quoteshift 30s 10s infinite linear;
+}
+
+.quote:nth-child(3) {
+    -webkit-animation: quoteshift 30s 20s infinite linear;
+} */
+
+
 /* The TypeWritter Stuff */
 
 .typewriter h1 {
