@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title> Ben's Page </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <h2 id="bottomlineupfront">Bottom Line Up Front</h2>
+
+                <p>Most businesses and organizations understand the advantages of “scalable” processes. Unfortunately, this term can be broad and there are few useful frameworks for evaluating processes to estimate how they might be made more scalable. One
+                    technique we suggest is to narrow the scope of the question. Instead of asking “How can this process be made more scalable?”, I suggest asking “How can this process be executed in a for loop?”</p>
+
+                <h2 id="overview">Overview</h2>
+
+                <p>The purpose of this post is to provide a mental model to assess &amp; improve processes to make them more scalable. The post is divided into three parts: </p>
+
+                <ol>
+                    <li>
+                        <p>Explanation of the term “scalable”</p>
+                    </li>
+
+                    <li>
+                        <p>Overview of “for loops”</p>
+                    </li>
+
+                    <li>
+                        <p>Designing processes as “for loops”</p>
+                    </li>
+                </ol>
+
+                <h2 id="whatdoesitmeantobescalable">What Does it Mean to be “Scalable?”</h2>
+
+                <p>Like so many terms in technology, “scalable” does not have a standardized definition. I use it here to indicate a technology, application, or process that can complete larger volumes of work without needing to add a commensurate amount
+                    of resources. To clarify this definition, consider a few examples in education: </p>
+
+                <ol>
+                    <li>
+                        <p><strong>Monitoring Exams is an Example of a Non-Scalable Process</strong> Most schools and/or standardized test agencies have a required ratio between test-takers and monitors. Generally, for every ~30 students taking a test, there
+                            must be at least one qualified individual physically present to supervise the exam. Accordingly, there is no way to expand the capacity for monitoring test-takers without adding the requisite amount of monitors. The process
+                            of monitoring a test could therefore be considered non-scalable. </p>
+                    </li>
+
+                    <li>
+                        <p><strong>Grading Multiple Choice Exams is an Example of a Scalable Process</strong> Multiple choice exams have a clearly defined answer key and a finite number of possible answers. Grading these exams by hand is, of course, not
+                            scalable for the same reasons that monitoring exams isn’t scalable. When the grading is automated, however, the process becomes completely scalable. An algorithm that is capable of grading 30 multiple choice exams is just as
+                            capable of grading 300,000. No additional resources would be needed to complete larger volumes of work (grading exams). </p>
+                    </li>
+                </ol>
+
+                <p>Admittedly, the above examples are simplistic. They do, however, identify the fundamental issue behind assessing scalability in processes: the ratio of resources needed to output generated. One monitor can observe ~30 test-takers, but
+                    one algorithm can grade a nearly infinite amount of multiple choice exams. </p>
+
+                <p>Great, data-driven, organization find ways to make as many processes as possible scalable. A good way approach this endeavor is to determine if/how a process can be incorporated into a for loop. </p>
+
+                <h2 id="overviewofforloops">Overview of “For Loops”</h2>
+
+                <p>For Loops are a relatively common practice in programming and are quite useful when applied in data science. Any programmers reading this post should already be familiar with Loops. For anyone new to the concept, however, the best way
+                    to explain For Loops is through a series of short questions. Consider, then the following:</p>
+
+                <p>What is the largest number in the following list?: </p>
+
+                <p>[88, 97, 95, 94, 81, 95, 92, 89, 82, 91]</p>
+
+                <p>Pretty straight-forward question, right? But consider how you realized 97 was the greatest number in this list. If you are like most people, you probably didn’t have a pre-conceived idea of what the largest number is. That’s to say you
+                    started off with 0 in mind. You then looked at the first number: 88. This number was greater than 0, so 88 became the largest number. You then looked at the second number: 97. This number was greater than 88, so 97 became the largest
+                    number. You then looked at the third number: 95. This number was not greater than 97, so 97 remained the largest number. You then repeated this process until you had looked through the entire list. </p>
+
+                <p>This process works on small lists of numbers, but what about this list:</p>
+
+                <p>[101957375, 101997647, 101966556, 101861556, 101924259,101932989, 101873667, 101893963, 101976584, 101948335, 101942355, 101910514, 101903144, 101970232, 101897938, 101926983, 101943788, 101854411, 101913103, 101902817, 101938990, 101870298,
+                    101854341, 101888667, 101941060, 101929071, 101948146, 101992676, 101855023, 101908734]</p>
+
+                <p>Obviously, this list isn’t as easy, and it is still only 30 numbers. Though the aforementioned process for finding the largest number clearly works, it is easy to see that there are limits to how far a human can take it. </p>
+
+                <p>Fortunately, For Loops work basically the same way people do. They just don’t face the same limitations. Here is how the first question would be solved by a for loop:</p>
+
+                <p>--------------------</p>
+
+                <p>list = [88, 97, 95, 94, 81, 95, 92, 89, 82, 91]</p>
+
+                <p>max = 0</p>
+
+                <p>for number in list:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;if number > max:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = number</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;else:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</p>
+
+                <p>print(max)</p>
+
+                <p>97</p>
+
+                <p>--------------------</p>
+
+                <p>If you aren’t familiar with code, don’t be dizzied by the above statement. Look at it line by line; it is the exact same logic used previously. First, a list was given to the program. With it, a variable, “Max” was set to zero. Then the
+                    program simply states to look at each number in the list. If that number is bigger than “Max” (which was set to zero to start), then “Max” becomes that number. If the number is not bigger than “Max,” continue on to the next number
+                    in the list. Lastly, the program says to print “Max” when it is done comparing it to each number in the list. This, of course, prints 97, because it is the largest number in the list. </p>
+
+                <p>Unlike people, the For Loop is capable of running this logic on massive scale. Passing a list of 30 number, 300 number, and 3000 numbers is all the same. Here is the same program applied to the larger set of 30 numbers:</p>
+
+                <p>--------------------</p>
+
+                <p>list = [101957375, 101997647, 101966556, 101861556, 101924259, 101932989, 101873667, 101893963, 101976584, 101948335, 101942355, 101910514, 101903144, 101970232, 101897938, 101926983, 101943788, 101854411, 101913103, 101902817, 101938990,
+                    101870298, 101854341, 101888667, 101941060, 101929071, 101948146, 101992676, 101855023, 101908734]</p>
+
+                <p>max = 0</p>
+
+                <p>for number in list:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;if number > max:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = number</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;else:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</p>
+
+                <p>print(max)</p>
+
+                <p>101997647</p>
+
+                <p>--------------------</p>
+
+                <h2 id="connectingbusinessprocessestoforloops">Connecting Business Processes to “For Loops”</h2>
+
+                <p>The above example highlights how a process – finding the largest number – can be made scalable by placing it in a for loop. Following this logic, truly savvy businesses seek to make all of their processes scalable. Integrating them into
+                    For Loops is a great way to do so. To make this point more clear, here is an example from some work I did for a client in Private Equity.</p>
+
+                <p>As a private equity firm, my client continuously seeks to find new opportunities to invest in privately held businesses. Most of these opportunities come from business brokers who have entered into seller listing agreements with business
+                    (think real estate agents, but for businesses). The process most private equity firms use for finding business brokers is what one might expect. First, they leverage their networks to see if anyone in their network is aware of suitable
+                    deals. Secondly, and just as frequently, they browse business broker websites to look for interesting listings. Like the initial example of finding the largest number, this process doesn’t scale. A person can only browse so many business
+                    broker websites. So my forward-thinking client asked me to help them scale this process. Just like the example of finding the largest number in a list, I scaled their process for finding deals by working it into a For Loop. In doing
+                    so, I followed the same process they use, but made sure every step is in a scalable for loop. </p>
+
+                <p>First, I took a list of the websites which provide registries of business brokers. I wrote a For Loop to visit each of those sties and return another list with all of the business broker names and websites from the initial list. (This
+                    is called “scraping” a site, and will be addressed in a separate post). Then I took the second list of business broker names and websites and wrote another For Loop to visit each of their sites and return the text from the websites
+                    into a database. </p>
+
+                <p>Though this is a simplification, one can see how these For Loops are similar to the ones in the initial example. </p>
+
+                <p>--------------------</p>
+
+                <p>broker_registry_list = [“https://cvbba.com/CVBBA/” , “https://www.ibba.org/find-a-business-broker/” , https://www.businessbroker.net/brokers, etc…]</p>
+
+                <p>broker_website_list = [ ]</p>
+
+                <p>for registry in broker_registry_list:</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;get_broker_websites_()</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;add_websites_to_broker_website_list()</p>
+
+                <p>--------------------</p>
+
+                <p>Now with a list of broker websites, execute another For Loop</p>
+
+                <p>--------------------</p>
+
+                <p>broker_website_list = [“https://www.advancedbusinessbrokerage.com”, “https://www.dcbusinessbroker.com” , https://www.sunbeltwnc.com, etc… ]</p>
+
+                <p>for websites in broker_website_list:</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;scrape_websites()</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;add_website_text_to_database()</p>
+
+                <p>--------------------</p>
+
+                <p>Lastly, I wrote a machine learning program to use the text data in the database to match the most relevant brokers to our clients deal criteria. </p>
+
+                <p>Instead of having to hire more and more people to find additional brokers, my client has a scalable process. There are tens of thousands of business broker websites, so having such a process allows them to identify more deals than they
+                    could by simply scouring the web manually.</p>
+
+                <h2 id="conclusion">Conclusion</h2>
+
+                <p>The term “scalable” can be broad. When evaluating processes, I advise against asking how a process can be made more scalable, and instead asking how it can be executed in a for loop. The above example highlights one such way a business
+                    can reinforce their business development efforts by working their processes into For Loops. </p>
+
+            </main>
+
+            <footer class="site-footer dashed-top">
+                – This site doesn't use cookies | No data is collected or shared –
+            </footer>
+
+        </div>
+
+
+</body>
+
+</html>
