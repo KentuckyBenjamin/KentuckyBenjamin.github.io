@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title> Ben's Page </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <h2> Bottom Line Up Front </h2>
+
+                <p>A web spider (also referred to as a ‘scraper’ or a ‘crawler’) is a program or script which browses websites. Spiders are usually used to collect information, though they can also be used to automate maintenance tasks like checking links
+                    and validating code. Though not perfect, spiders are an effective and reasonably reliable method for collecting data, especially when no API is available. </p>
+
+                <h2>Overview</h2>
+
+                <p>The purpose of this white paper is to give the reader a high-level understanding of web spiders and to briefly examine their benefits and concerns. This white paper, therefore, is divided into three sections. </p>
+
+                <ol>
+                    <li>
+                        <p>How spiders work</p>
+                    </li>
+
+                    <li>
+                        <p>Practical uses for spiders</p>
+                    </li>
+
+                    <li>
+                        <p>Limitations of spiders</p>
+                    </li>
+                </ol>
+
+                <h2>How Spiders Work </h2>
+
+                <p>Spiders, in short, visit websites in a systematic matter and return (‘scrape’) the source code from those sites. For readers not familiar with coding or web development, follow these steps to help make this point a bit more clear (note:
+                    these steps are for persons visiting the site on Chrome)</p>
+
+                <ol>
+                    <li>
+                        <p>Click on the view tab on the top left corner of your screen</p>
+                    </li>
+
+                    <li>
+                        <p>Click on developer</p>
+                    </li>
+
+                    <li>
+                        <p>Click on view source</p>
+                    </li>
+                </ol>
+
+                <p>You should be looking at something like this…</p>
+
+                <p><img src="images/view_source.png" alt="" /></p>
+
+                <p>This is the ‘source code’ mentioned above. Imagine if you were to visit every link on this website, view the source code, then copy and paste it into a text file. That, basically, is web scraping. </p>
+
+                <p>Of course, the text from the source code is not formatted in a manner in which we can use it immediately. There are a lot of tags and div objects in the way, so the text has to be cleaned. Also, who would ever have enough time to manually
+                    copy and paste source code into a database? Fortunately, there are some great tools like
+
+                    <a href="https://pypi.org/project/beautifulsoup4/" , style="color: #212121;"><u>Beautiful Soup</u></a>,
+                    <a href="https://pypi.org/project/selenium/" , style="color: #212121;"><u> Selenium</u></a>, and
+                    <a href="https://pypi.org/project/Scrapy/" , style="color: #212121;"><u>Scrapy</u></a> for addressing these problems of scalability and messy text. I won’t, however, go into how each of these tools work in this short write up.</p>
+
+                <h2>Practical Uses for Spiders</h2>
+
+                <p>Spiders are most commonly used to scrape information from webpages and to add it to a database wherein it can be cleaned and used. There are numerous applications for spiders, ranging from populating databases to support search engines
+                    to testing web links. Recently, I helped a client use web scraping to build a database on businesses for sale. My client was looking to buy businesses, but didn't have the time or resources to browse the thousands of web pages dedicated
+                    to listing businesses for sale. To solve for this, I created a spider which would scrape all of the listing info from these sites and add the info to a Postgres database. Once in the database, all of the text was cleaned and structured.
+                    As a result, rather than having to browse thousands of web pages, my client could run a few simple queries in the database to find listings of interest to them.</p>
+
+                <h2>Limitations of Spiders</h2>
+
+                <p>Despite their many uses, there are some drawbacks to web spiders. First, they cannot be used everywhere. Most well-developed e-commerce and social media sites, for instance, have been deliberately engineered to make them hard to scrape.
+                    There are ways around this, but some of these work-arounds can be maintenance intensive, or even sketchy. (If you are not sure what you can and cannot scrape on a webpage, check the robots.txt file for the page) </p>
+
+                <p>Additionally, spiders can break somewhat easily. That is not because they are inherently bad, or poorly written. They tend to break easily because they sites they are scraping can change frequently. For example, imagine if you wrote a
+                    spider to scrape publicly available data from the NYC 311 service, and then structure that data in a spreadsheet on your desktop. As long as the website which is hosting the NYC 311 data doesn’t change, your spider will function properly.
+                    But as soon as the website changes, or the data you are scraping is formatted differently, the spider will begin to fail. </p>
+
+            </main>
+
+            <footer class="site-footer dashed-top">
+                – This site doesn't use cookies | No data is collected or shared –
+            </footer>
+
+        </div>
+
+
+</body>
+
+</html>
