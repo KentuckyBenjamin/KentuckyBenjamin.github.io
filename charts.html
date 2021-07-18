@@ -6,7 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="static/charts.css">
+
     <title> Ben's Page </title>
 </head>
 
@@ -41,57 +42,127 @@
 
                 <h2>Title Placeholder</h2>
 
-                <table class="charts-css line show-heading show-labels show-primary-axis show-data-axes">
+                <table>
+
+                    <caption> 2016 Summer Olympics Medal Table </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col"> Country </th>
+                            <th scope="col"> Gold </th>
+                            <th scope="col"> Silver </th>
+                            <th scope="col"> Bronze </th>
+                        </tr>
+                    </thead>
 
                     <tbody>
                         <tr>
-                            <td style="--start: 0.0; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+                            <th scope="row"> USA </th>
+                            <td> 46 </td>
+                            <td> 37 </td>
+                            <td> 38 </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.4; --size: 0.2"> <span class="data"> $ 20K </span> </td>
+                            <th scope="row"> GBR </th>
+                            <td> 27 </td>
+                            <td> 23 </td>
+                            <td> 17 </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.2; --size: 0.6"> <span class="data"> $ 60K </span> </td>
-                        </tr>
-                        <tr>
-                            <td style="--start: 0.6; --size: 0.4"> <span class="data"> $ 40K </span> </td>
-                        </tr>
-                        <tr>
-                            <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
-                        </tr>
-                        <tr>
-                            <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
-                        </tr>
-                        <tr>
-                            <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+                            <th scope="row"> CHN </th>
+                            <td> 26 </td>
+                            <td> 18 </td>
+                            <td> 26 </td>
                         </tr>
                     </tbody>
 
                 </table>
 
-                <table class="charts-css line" id="my-chart">
+                <h2>Title Placeholder</h2>
+
+                <table class="charts-css bar">
+
+                    <caption> 2016 Summer Olympics Medal Table </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col"> Country </th>
+                            <th scope="col"> Gold </th>
+                            <th scope="col"> Silver </th>
+                            <th scope="col"> Bronze </th>
+                        </tr>
+                    </thead>
 
                     <tbody>
                         <tr>
-                            <td style="--start: 0.0; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+                            <th scope="row"> USA </th>
+                            <td> 46 </td>
+                            <td> 37 </td>
+                            <td> 38 </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.4; --size: 0.2"> <span class="data"> $ 20K </span> </td>
+                            <th scope="row"> GBR </th>
+                            <td> 27 </td>
+                            <td> 23 </td>
+                            <td> 17 </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.2; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+                            <th scope="row"> CHN </th>
+                            <td> 26 </td>
+                            <td> 18 </td>
+                            <td> 26 </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <h2>Title Placeholder</h2>
+
+                <table class="charts-css column">
+
+                    <caption> Front End Developer Salary </caption>
+
+                    <tbody>
+                        <tr>
+                            <td style="--size: calc( 40 / 100 )"> $40K </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.6; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+                            <td style="--size: calc( 60 / 100 )"> $60K </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
+                            <td style="--size: calc( 75 / 100 )"> $75K </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+                            <td style="--size: calc( 90 / 100 )"> $90K </td>
                         </tr>
                         <tr>
-                            <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+                            <td style="--size: calc( 100 / 100 )"> $100K </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <h2>Title Placeholder</h2>
+
+                <table class="charts-css column show-data-on-hover">
+
+                    <caption> Front End Developer Salary </caption>
+
+                    <tbody>
+                        <tr>
+                            <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
+                        </tr>
+                        <tr>
+                            <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
+                        </tr>
+                        <tr>
+                            <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
+                        </tr>
+                        <tr>
+                            <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
+                        </tr>
+                        <tr>
+                            <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
                         </tr>
                     </tbody>
 
