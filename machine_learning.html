@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title> Ben's Page </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <h2 id="preamble">Preamble</h2>
+                <p>The term machine learning (ML) has become ubiquitous. Businesses are touting it as a secret weapon to “unlock hidden value” in nearly any scenario. I agree that ML has many use cases, but it is certainly not a panacea. Nor is it as mysterious
+                    as sales teams would have you believe. The goal of this post, therefore, is to give a basic explanation of ML, its effective uses, and limitations. </p>
+                <h2 id="bottom-line-up-front">Bottom Line Up Front</h2>
+                <p>Machine Learning (ML) involves using algorithms, APIs, development and training toolkits, and data to design, train, and deploy models into applications, processes, or other machines. The models generated from ML tools are usually geared
+                    towards predicting or classifying outcomes. ML models can be divided into three groups:</p>
+                <ol>
+                    <li>
+                        <p>Supervised learning</p>
+                    </li>
+                    <li>
+                        <p>Unsupervised learning</p>
+                    </li>
+                    <li>
+                        <p>Reinforced learning</p>
+                    </li>
+                </ol>
+                <h2 id="overview">Overview</h2>
+                <p>Sadly, the term Machine Learning is widely abused and has become somewhat of a buzzword in the last few years. The reality is that using ML is not that complicated. Thanks to the work of some brilliant engineers over the last decade, ML
+                    tools are becoming increasingly accessible. The trick, of course, is not just to know how to use these tools, but when to use them and for what purpose. The purpose of this whitepaper, therefore, is to help provide some useful context.
+                    In this white paper we will cover:</p>
+                <ol>
+                    <li>
+                        <p>A basic explanation of the term Machine Learning</p>
+                    </li>
+                    <li>
+                        <p>Three types of Machine Learning models</p>
+                    </li>
+                </ol>
+                <h2 id="machine-learning-in-a-nutshell">Machine Learning, in a Nutshell</h2>
+                <p>Machine Learning (ML) involves using algorithms, APIs, development and training toolkits, and data to design, train, and deploy models into applications, processes, or other machines. In non-technical terms, ML uses computer and data science
+                    tools to do things like make predictions, recommendations, or classify things (e.g. suggest movies on Netflix, classify MRI images as “normal” or “abnormal”). There are three types of ML models: supervised learning, unsupervised learning,
+                    and reinforced learning. </p>
+                <h2 id="supervised-learning">Supervised Learning</h2>
+                <p>Supervised learning models predict the value of an outcome measure based on a number of input measures. Good examples of these models can be found in professional sports, wherein they heavily influence draft rankings. Not long ago, draft
+                    rankings were determined exclusively through the intuition of scouts, coaches, and owners. Now, measured data about individual athletes (e.g. past performance, size, speed, etc.) is studied. From this data, predictions are made (how
+                    well will they do on a given team and in a given position). These predictions shape the demand (rank) of a given athlete. </p>
+                <p>The basic process for supervised learning models isn’t that complicated. In short, you are taking a set of data for which you know the results and building a model to predict those results so you can apply it elsewhere. For instance, consider
+                    the price of engagement rings. Blue Nile, a popular online jewelry company, makes available large amounts of data on the sale of engagement rings. This data includes numerous “features,” or characteristics about the rings themselves
+                    (e.g. cut, clarity, carat, etc.). Most importantly, the data includes the sale price for each of the rings for which features are disclosed. </p>
+                <p>One could build a supervised learning model wherein all this Blue Nile data would be passed through an algorithm to determine how each of the ring features correlates to the overall price of the ring (kind of like a linear regression).
+                    Then this model would be run multiple times against “test” data wherein it would be used to predict the price of the ring given a set of features and then checked against the actual price of the ring. With each iteration, the algorithm
+                    would produce better results. Because you are testing each iteration against data for which you know the result, the model is called “supervised” learning. </p>
+                <p>Of course, it would be impossible to perfectly predict the price of a ring though this process. But these models are still quite helpful. I built this exact model from Blue Nile data in 2017 and would be happy to share the results if anyone
+                    out there is doing some ring shopping, or simply wants to know more. A rule of thumb I noticed through it all, however, was: </p>
+                <p>Ring price = ($5,600)(Carat Size) +/- 7.5%.</p>
+                <h2 id="unsupervised-learning">Unsupervised Learning</h2>
+                <p>Unsupervised learning models describe the associations and patterns among a set of input measures (wherein there is no outcome measure). These types of models are widely used in marketing and advertising teams. </p>
+                <p>The basic process for unsupervised learning models isn’t that far removed from that of supervised learning models. The key difference is that unsupervised models do not have a known outcome. Re-consider the example of Blue Nile data on
+                    ring sales but imagine this data did not have the ring prices, only the features of the ring. Would this data still be useful? I think so. </p>
+                <p>Unsupervised learning models could be developed to cluster the data into categories, or segments, of rings that consider all the features. With these segments in mind, analysts would be better oriented to study the purchase behavior of
+                    those shopping for each segment. The important thing to note here is that there is no supervised, or known, outcome against which results can be tested. Unsupervised models are inherently exploratory. </p>
+                <p>The infamous Cambridge Analytica incident is a good example of unsupervised learning. Like many marketing and/or intelligence firms, Cambridge Analytica used unsupervised learning algorithms to study social media data and cluster users
+                    into groups based beliefs and political affiliations. The lists of these groups, and what messages they would likely respond to was obviously valuable to those wishing to extend political influence. </p>
+                <p>This isn’t a paper on political beliefs, so I’ll try not to open the can of worms handed to us by Cambridge Analytica. I do, however, urge anyone reading this to consider the state of their data privacy. (I dedicated a separate post to
+                    this topic). </p>
+                <h2 id="reinforced-learning">Reinforced Learning</h2>
+                <p>Reinforced learning models learn how to best interact with an environment, based on a reward function (describing if the result is good or not). For example, banks use reinforced learning models to nominate stocks for investment. These
+                    stocks are reviewed by a professional investor who categorizes them “buy” or “don’t buy.” The results from the investor’s review are then tied back into the model to generate more quality recommendations based on the feedback. Thus,
+                    the model is reinforced or “trained.” </p>
+                <p>Reinforced learning models must necessarily include feedback loops. Netflix’s recommendation engine is another great example of this. Netflix uses unsupervised learning models to study users’ viewing behavior and make recommendations.
+                    When a user accepts a recommendation, that information is fed back into the unsupervised learning model to refine it and make it more accurate. The model therefore gets “smarter” over time. </p>
+                <h2 id="concluding-remarks">Concluding Remarks</h2>
+                <p>There are three types of ML models: supervised, unsupervised, and reinforced. These models are quite useful and can help support nearly any organization. The trick, however, is to know not just how to use these tools, but when and for
+                    what purpose. </p>
+
+
+            </main>
+
+            <footer class="site-footer dashed-top">
+                This site doesn't use cookies or collect data
+            </footer>
+
+        </div>
+
+
+</body>
+
+</html>
