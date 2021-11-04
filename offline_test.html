@@ -42,14 +42,14 @@
             <main class="site-main">
 
                 <script>
-                    window.addEventListener('online', function(e) {
-                        console.log('online');
-                    });
+                    // window.addEventListener('online', function(e) {
+                    //     console.log('online');
+                    // });
 
                     if (navigator.onLine) {
-                        document.write("<span><h1>If online ye be, ye shall never see me</h1></span>");
+                        document.write("<span><h2>Looks like you are online. To see the real contents of this page: disconnect (airplane mode), click the back button on your browser, then click the page link again.</h2></span>");
                     } else {
-                        document.write("<span><h1>Ah ha - you found the secret message! Here it is: I love my family. Although - that's not really a secret!</h1></span>");
+                        document.write("<span><h2>Looks like you are offline. Going forward, I'll add some real content to this page which users can only see when they are disconnected from the internet. (This is just a placeholder for now to verify that the feature works.)</h2></span>");
                     }
                 </script>
 
