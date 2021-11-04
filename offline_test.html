@@ -42,10 +42,14 @@
             <main class="site-main">
 
                 <script>
+                    window.addEventListener('online', function(e) {
+                        console.log('online');
+                    });
+
                     if (navigator.onLine) {
                         document.write("<span><h1>If online ye be, ye shall never see me</h1></span>");
                     } else {
-                        document.write("<span>Ah ha - you found the secret message!</span>");
+                        document.write("<span><h1>Ah ha - you found the secret message!</h1></span>");
                     }
                 </script>
 
