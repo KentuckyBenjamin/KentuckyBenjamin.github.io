@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="static/offline_test.css">
+        <link rel="stylesheet" href="static/styles.css">
         <title> Ben's Page </title>
     </head>
 </head>
@@ -42,37 +42,12 @@
             <main class="site-main">
 
                 <script>
-                    const onlineItems = document.querySelectorAll('[data-online-only]');
-                    const offlineItems = document.querySelectorAll('[data-offline-only]');
-
-                    const toggleDisplay = (elements, value) => {
-                        elements.forEach(item => {
-                            item.style.display = value;
-                        });
+                    if (navigator.onLine) {
+                        document.write("<span><h1>If online ye be, ye shall never see me</h1></span>");
+                    } else {
+                        document.write("<span>Ah ha - you found the secret message!</span>");
                     }
-
-                    const showItems = () => {
-                        toggleDisplay(onlineItems, navigator.onLine ? 'block' : 'none');
-                        toggleDisplay(offlineItems, navigator.onLine ? 'none' : 'block');
-                    };
-
-                    if (!'onLine' in navigator) {
-                        return;
-                    }
-
-                    showItems();
-
-                    window.addEventListener('online', showItems);
-                    window.addEventListener('offline', showItems);
                 </script>
-
-                <div data-online-only>
-                    If online you be, you'll never see me
-                </div>
-
-                <div data-offline-only>
-                    Woohoo! You found the secret message
-                </div>
 
             </main>
 
