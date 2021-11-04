@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/offline_test.css">
+        <title> Ben's Page </title>
+    </head>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <script>
+                    const onlineItems = document.querySelectorAll('[data-online-only]');
+                    const offlineItems = document.querySelectorAll('[data-offline-only]');
+
+                    const toggleDisplay = (elements, value) => {
+                        elements.forEach(item => {
+                            item.style.display = value;
+                        });
+                    }
+
+                    const showItems = () => {
+                        toggleDisplay(onlineItems, navigator.onLine ? 'block' : 'none');
+                        toggleDisplay(offlineItems, navigator.onLine ? 'none' : 'block');
+                    };
+
+                    if (!'onLine' in navigator) {
+                        return;
+                    }
+
+                    showItems();
+
+                    window.addEventListener('online', showItems);
+                    window.addEventListener('offline', showItems);
+                </script>
+
+                <div data-online-only>
+                    If online you be, you'll never see me
+                </div>
+
+                <div data-offline-only>
+                    Woohoo! You found the secret message
+                </div>
+
+            </main>
+
+            <footer class="site-footer dashed-top">
+                This site doesn't use cookies or collect data
+            </footer>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
