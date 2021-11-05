@@ -41,23 +41,20 @@
 
             <main class="site-main">
 
-                <script>
+                <!-- <script>
                     if (navigator.onLine) {
                         document.write("<span><h2>Looks like you are online. To see the real contents of this page: disconnect (airplane mode), click the back button on your browser, then click the page link again.</h2></span>");
                     } else {
-                        document.write("");
+                        document.write("<span><h2>Looks like you are offline. Going forward, I'll add some real content to this page which users can only see when they are disconnected from the internet. (This is just a placeholder for now to verify that the feature works.)</h2></span>");
                     }
-                    // } else {
-                    //     document.write("<span><h2>Looks like you are offline. Going forward, I'll add some real content to this page which users can only see when they are disconnected from the internet. (This is just a placeholder for now to verify that the feature works.)</h2></span>");
-                    // }
-                </script>
+                </script> -->
 
                 <script>
                     window.addEventListener('load', function() {
                         var status = document.getElementById("status");
 
                         function updateOnlineStatus(event) {
-                            var condition = navigator.onLine ? "" : "<h2> Looks like you are offline. Going forward, I'll add some real content to this page which users can only see when they are disconnected from the internet. (This is just a placeholder for now to verify that the feature works.) </h2>";
+                            var condition = navigator.onLine ? "<h2>Looks like you are online. To see the real contents of this page: disconnect (airplane mode), click the back button on your browser, then click the page link again.</h2>" : "<h2> Looks like you are offline. Going forward, I'll add some real content to this page which users can only see when they are disconnected from the internet. (This is just a placeholder for now to verify that the feature works.) </h2>";
                             status.className = condition;
                             status.innerHTML = condition;
                         }
