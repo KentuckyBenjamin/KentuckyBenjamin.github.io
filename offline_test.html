@@ -49,11 +49,11 @@
                         if (online) {
                             statusEl.classList.remove('warning');
                             statusEl.classList.add('success');
-                            statusEl.innerText = `You're online!`;
+                            statusEl.innerText = `Looks like you are online. See what happens if you turn your wifi off (switch to airplane mode)...`;
                         } else {
                             statusEl.classList.remove('success');
                             statusEl.classList.add('warning');
-                            statusEl.innerText = `You're offline!`;
+                            statusEl.innerText = `Ah ha! You've found a message that can only be displayed if you are offline. Cool, right?`;
                         }
                     }
 
@@ -72,14 +72,9 @@
                     });
                 </script>
 
+                <h2 class="network-status info-box success"></h2>
 
-                <p class="network-status info-box success">You're online!</p>
-
-
-
-
-
-
+                <!-- old stuff -->
 
                 <!-- <script>
                     if (navigator.onLine) {
