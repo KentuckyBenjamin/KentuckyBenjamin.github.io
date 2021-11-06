@@ -41,6 +41,46 @@
 
             <main class="site-main">
 
+
+                <script>
+                    function showStatus(online) {
+                        const statusEl = document.querySelector('.network-status');
+
+                        if (online) {
+                            statusEl.classList.remove('warning');
+                            statusEl.classList.add('success');
+                            statusEl.innerText = `You're online!`;
+                        } else {
+                            statusEl.classList.remove('success');
+                            statusEl.classList.add('warning');
+                            statusEl.innerText = `You're offline!`;
+                        }
+                    }
+
+                    window.addEventListener('load', () => {
+                        // 1st, we set the correct status when the page loads
+                        navigator.onLine ? showStatus(true) : showStatus(false);
+
+                        // now we listen for network status changes
+                        window.addEventListener('online', () => {
+                            showStatus(true);
+                        });
+
+                        window.addEventListener('offline', () => {
+                            showStatus(false);
+                        });
+                    });
+                </script>
+
+
+                <p class="network-status info-box success">You're online!</p>
+
+
+
+
+
+
+
                 <!-- <script>
                     if (navigator.onLine) {
                         document.write("<span><h2>Looks like you are online. To see the real contents of this page: disconnect (airplane mode), click the back button on your browser, then click the page link again.</h2></span>");
@@ -49,7 +89,7 @@
                     }
                 </script> -->
 
-                <script>
+                <!-- <script>
                     window.addEventListener('load', function() {
                         var status = document.getElementById("status");
 
@@ -64,7 +104,7 @@
                     });
                 </script>
 
-                <div id="status"></div>
+                <div id="status"></div> -->
 
             </main>
 
