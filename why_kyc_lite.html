@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon_knight_blue.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title> Ben's Page </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <h2 id="short-version">Short Version</h2>
+
+                <p>KYC-Lite shouldn’t exist. None of the KYC name check platforms should; the U.S. government should offer this as a free service. Until they do, however, I’ve built KYC-Lite to address an issue which deeply bothers me: A firm or individual
+                    shouldn’t have to wonder if they are doing business with someone in a ‘high risk’ category (e.g. sanctions list, barred by FINRA, etc.). ‘Knowing Your Client’ should be free and easy. </p>
+
+                <p>I’d make the entire site free if I could, but unfortunately some particular searches incur a cost. I’ve therefore restricted those searches to users only, who can prepay for their searches (which covers the costs incurred). If I ever achieve
+                    material wealth, or if someone wants to make a donation to pay for these particular costs, I’d love to open this up so it&#39;s completely free &amp; public domain. </p>
+
+                <h2 id="still-reading-here-is-a-more-in-depth-perspective-on-why-kyc-lite-is-so-important-to-me-">Still reading..? Here is a more in-depth perspective on why KYC-Lite is so important to me:</h2>
+
+                <p>I joined the U.S. military in the summer of 2001. I was 18 then. As such, more than 50% of my lifespan has been impacted - at times utterly consumed - by the ‘Global War on Terrorism.’ Over the last 20+ years, I’ve come to appreciate the
+                    extraordinary resources the United States government has at its disposal to combat terrorist and/or criminal organizations. I’ve simultaneously grown frustrated over the lack of distribution of those resources, specifically data. </p>
+
+                <p>Consider, for instance, the infamous ‘No Fly List.’ This secretive list is maintained by the FBI. The process through which individuals are added is a complete black box, and access to the database is closed to the public. After 20 years
+                    of ‘War on Terrorism,’ I ask: how is this possible? Why wouldn’t this information be made available to the vast networks of American businesses, some of whom likely (unwittingly) transact with individuals on this list? Isn’t this counter
+                    to the very purpose of the ‘War on Terrorism?’ Worse yet, the no fly list is so poorly administered that airlines are now considering creating their own. That, to me, is outright failure. 20+ years of war, targeting, surveillance...
+                    and one of the key results from this effort - the ‘no fly list’- isn’t available to the public, causing airlines to duplicate the data on their own... How shameful?</p>
+
+                <p>As much as it bothers me, the ‘No Fly List’ is a bigger issue than anything I can influence... The immediate issue I’m focused on presently is the siloed nature of the useful KYC data that is already in the public domain. There are easily
+                    over 25 sanctions, actions, and negative press release databases disconnected and scattered across public domains. One would think that the U.S. government, having already invested so much into this effort, would take the lead on coalescing
+                    this data and making it easily accessible. After all, making information on ‘high risk’ individuals accessible to businesses decreases the freedom those individuals have to transact in the U.S. economy. Searching all these useful data
+                    sources at once should therefore be free and simple. I hope KYC-Lite solves this problem. </p>
+
+                <p>In developing this project, I&#39;ve worked with a friend who works in KYC professionally, and who alerted me to the severe nature of this problem in the first place. On the dev side of things, I’ve drawn inspiration from three sources:
+                    Richard Barosky’s judyrecords, Troy Hunt’s haveibeenpwned, and Alexandra Elbakyan’s Sci-Hub. A bit more about these projects and why I respect them.</p>
+
+                <h2 id="-judyrecords-https-www-judyrecords-com-"><a href="https://www.judyrecords.com/" , style="color: #212121;">judyrecords</a></h2>
+
+                <p>Like KYC-relevant information, legal cases strike me as something that should be completely free and accessible to the American public. The fact that Americans have to pay for access to public court records is, to me, unconscionable. We
+                    operate on a precedent law basis in America. I’m not a lawyer, but it strikes me as analogous to a version control system for software. Want to know if something is legal? Find the most current version of a similar case and its verdict.
+                    Yet to find that verdict you have to rely on PACER -- a shitty website -- which charges by the search, even if the search returns no results. Unbelievable! Richard Barosky’s judyrecords addresses this problem. The site is free, easy
+                    to use, and includes over 600M records. Bravo!</p>
+
+                <h2 id="-haveibeenpwned-https-haveibeenpwned-com-">
+                    <a href="https://haveibeenpwned.com/" , style="color: #212121;" ">haveibeenpwned</a>
+                </h2>
+                
+                <p>It seems to me that the NSA, U.S. Cybersecurity and Infrastructure Security Agency, and U.S. Cyber Command are all way too focused on offense. I spend a fair amount of time working on apps, databases, and things of this nature, and I have
+                    yet to see a single useful security library or service come from one of these agencies. This is astonishing. One would think these agencies would take the lead on publishing and distributing security resources domestically. But as
+                    it stands, Americans are essentially in an ‘everyone for themselves’ cyberdefense posture. </p>
+                
+                <p>Worse yet, legislation is now being introduced to fine companies who pay ransoms to resolve ransomware attacks... as if that will solve the problem. To extend that logic to other forms of crime would be to say the solution to armed robbery
+                    is to impose a fine on anyone who gives money to their assailant. This logic is pure absurdity. Why aren’t <em>quality</em> security packages, services, and resources being made freely available to the American public? Why aren’t there
+                    physical, local, resource centers where Americans can bring their devices to learn and receive support?</p>
+                
+                <p>Troy Hunt’s haveibeenpwned helps this cause by allowing anyone to do a quick check of their email address to determine if it has been exposed in a data breach. The site is simple and free, although donations are accepted (I strongly recommend
+                    making a donation). Kudos!</p>
+                
+                <h2 id="-sci-hub-https-sci-hub-se- "><a href="https://sci-hub.se/ " , style="color: #212121; ">sci-hub</a></h2>
+                
+                <p>Sci-Hub is a website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers&#39; paywalls in various ways. The site is somewhat controversial, but I’m in the pro Sci-Hub
+                    camp. Here is why:</p>
+                
+                <p>I believe our generation has an opportunity, a responsibility, to eliminate scarcity for the vital resources upon which society collectively relies. Energy is the top-of-mind resource for most people when it comes to scarcity, and I agree;
+                    our generation should absolutely pursue the development and dissemination of harmless, scalable, renewable energy sources. But I also argue that quality academic material is a key component of social growth. </p>
+                
+                <p>Today, much of the (American publicly funded) scientific research is being locked up behind paywalls by skeezy publishers. With few exceptions, this is a bad thing for society. The only persons who benefit from restricting access to this
+                    information are the publishing companies. Frankly, I don’t know how these people live with themselves. They are essentially choosing to protect their profits at the expense of quality of life for developing nations who cannot access
+                    important academic resources due to these arbitrary restrictions. It&#39;s despicable. </p>
+                
+                <p>This is why I’m proud of Alexandra Elbakyan and the work she’s accomplished. I’m sure there are numerous students and universities throughout the world that have access to academic material they otherwise wouldn’t if it weren&#39;t for
+                    her. Well done!</p>
+                
+                <h2 id="closing-thoughts ">Closing Thoughts</h2>
+                
+                <p>I hope KYC-Lite is able to have an impact similar to one of these sites. I feel the ability to search all reasonably available KYC data in a single place is a public good. </p>
+                
+                <p>Later in the year, I’ll probably make a short post showing some of the growth statistics and highlights from the page. Hopefully the site catches on! </p>
+
+            </main>
+
+            <footer class="site-footer dashed-top ">
+                This site doesn't use cookies or collect data
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
