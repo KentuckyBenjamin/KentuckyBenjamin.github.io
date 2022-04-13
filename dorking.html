@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon_knight_blue.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title> Ben's Page </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container">
+
+            <header class="site-header dashed-bottom">
+                <a class="site-title" href="index.html">
+                    <div class="blinker">
+                        <h1>>Benjamin Gaines</h1>
+                    </div>
+                </a>
+                <nav class="responsive-nav">
+                    <label for="navigation-toggle">
+                     <svg class="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
+                  </label>
+                </nav>
+                <input type="checkbox" id="navigation-toggle">
+                <nav class="site-nav nav-separated">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="thoughts.html">Thoughts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="site-main">
+
+                <h2 id="primer-on-dorking-">Primer on &#39;Dorking&#39;</h2>
+                <h6 id="_-10-min-read_"><em>~10 Min Read</em></h6>
+                <p>&#39;Dorking&#39; is the term used for using lesser-known features on Google and Bing to mine data. In this case, it would be used to mine for businesses whose sites contained words of interest and, if possible, the contact info for those
+                    businesses. Rather than discuss &#39;dorking&#39; on an abstract level, however, lets pick a specific use case and walk through it. </p>
+                <p>In this example, lets assume we want to &#39;dork&#39; a list of email addresses which meet some basic criteria:</p>
+                <ul>
+                    <li>Has profiles on: <code>[Instagram, TikTok]</code></li>
+                    <li>Email domains: <code>[gmail.com, yahoo.com]</code></li>
+                    <li>Locations: <code>[Charlotte, Raleigh]</code></li>
+                    <li>Contains Key Words: <code>[Dentist, Chiropractor]</code></li>
+                </ul>
+                <p>The google search phrase we&#39;d use to get one of these combos would be:</p>
+                <pre><code><span class="hljs-symbol">site:</span>instagram.com <span class="hljs-string">"@gmail.com"</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">"Charlotte"</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">"Dentist"</span>
+                </code></pre>
+                <p>You could do this manually on the Google website, but it would take a long time. The results are limited to 10 per page, so you&#39;d have to click &#39;next&#39; a zillion times. Even then you&#39;d have to browse the text for each of
+                    the results, look for email addresses, and copy and paste them into a file. So we&#39;ll instead write a program to do this for us.</p>
+                <p>The program will run through all possible search combinations we provide it and: </p>
+                <ul>
+                    <li>&#39;Click&#39; through <em>all</em> results (usually 300-600 links)</li>
+                    <li>Extract the text from those links</li>
+                    <li>Extract the email addresses from that text</li>
+                </ul>
+                <p>You&#39;d end up with something like this (with many, many more rows):</p>
+                <pre><code>id, url, email, text
+                
+                <span class="hljs-number">0</span>, <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/www.instagram.com/road</span>_to_rainadee_dentistry/, Hellorainadee@_gmail.com, Hellorainadee@_gmail.com. <span class="hljs-number">108</span> posts. <span class="hljs-number">5</span>,<span class="hljs-number">417</span> followers. <span class="hljs-number">659</span> following ... Chelsea <span class="hljs-params">| Student _Dentist_ ... _Charlotte_ |</span> Dental Student.
+                
+                <span class="hljs-number">1</span>, <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/www.instagram.com/opera</span>.dental/, opera.dental.insta@_gmail.com, Professional opera singer turned dental student Ithaca College Harvard Penn Dental opera.dental.insta@_gmail.com<span class="hljs-number">_</span>
+                </code></pre>
+                <p>From here, we&#39;d simply just expand the inputs provided to the program and re-run. So perhaps something like:</p>
+                <ul>
+                    <li>Has profiles on: <code>[Instagram, TikTok, Facebook, LinkedIn, Google Business, etc.]</code></li>
+                    <li>Email domains: <code>[gmail.com, yahoo.com, hotmail.com, *.com, etc.]</code></li>
+                    <li>Locations: <code>[Charlotte, Raleigh, Wilmington, Greenville, etc.]</code></li>
+                    <li>Contains Key Words: <code>[Dentist, Chiropractor, Massage Therapist, Acupuncture, etc.]</code></li>
+                </ul>
+                <p><em>Note: <code>*</code> is the &#39;wildcard&#39; meaning &#39;any&#39;</em></p>
+                <p>This approach yields actionable information in and of itself (in the form of a mass email list). You could always expand upon this corpus of data, however. A few top of mind thoughts on how to do so would be:</p>
+                <ul>
+                    <li>Scraping their websites and parsing the text for phone numbers, additional names, key words, etc.</li>
+                    <li>Checking company and owner names against review sites for more info (Yelp, Google, Angie&#39;s list, etc.)</li>
+                    <li>Checking company and owner names against government databases to see if they have performed Govt contracts before (excellent way to infer company size and revenue)</li>
+                </ul>
+                <p>&#39;Dorking&#39; is a fairly common practice for businesses, specifically data and sales teams within businesses. Usually, I&#39;m over-the-top against things like this, because I&#39;m a strong privacy advocate. In this case, however,
+                    I&#39;m split. </p>
+                <p>I would have to imagine that if I were a Dentist in this example who desired a strong internet presence, I&#39;d be fine with someone scraping my sites for marketing purposes. On the other hand, if I were just someone caught up on this
+                    because I mentioned the word &#39;dentist&#39; in a random Instagram post, I&#39;d feel surveilled. But frankly, I&#39;m also slightly unsympathetic towards persons in the latter case. After all, why would anyone use social media at
+                    this point? Is there anyone left in the country who doesn&#39;t recognize how skeezy and low-brow social media companies are? It doesn&#39;t seem like one could reasonably expect to use social media and have privacy. </p>
+
+
+            </main>
+
+            <footer class="site-footer dashed-top">
+                This site doesn't use cookies or collect data
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
